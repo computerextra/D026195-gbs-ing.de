@@ -1,0 +1,31 @@
+#root {
+  height: 100vh;
+  
+  overflow: hidden;
+}
+.custom-container {
+  margin-top: 20vh;
+}
+
+[data-bs-theme="dark"] {
+  #root{
+    /* background-image: url();  */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+}
+[data-bs-theme="light"] {
+  #root{
+    /* background-image: url();  */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+  .row {
+    gap: 2em;
+  }
+}
