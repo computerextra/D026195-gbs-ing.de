@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Button, Col, Container, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import Datenschutz from "./Datenschutz";
 import useTheme from "./Hooks/useTheme";
+import Impressum from "./Impressum";
 import ThemeToggle from "./ThemeToggle";
 
 function App() {
@@ -21,10 +23,10 @@ function App() {
 
   return (
     <>
+      <ThemeToggle onClick={toggleMode} />
       <Container fluid={"sm"} className="custom-container">
-        <ThemeToggle onClick={toggleMode} />
         <h2 className="text-center">Hier entsteht die Webseite von</h2>
-        <h1 className="text-center">GBS - Green Building Solutions GmbH</h1>
+        <h1 className="text-center">Green Building Solutions GmbH i.G</h1>
         <Row className="gx-5 mt-5">
           <Col sm={6} className="d-flex justify-content-center">
             <Button variant="primary" className="btn-lg " onClick={handleShowImpressum}>
@@ -39,29 +41,9 @@ function App() {
         </Row>
       </Container>
       {/* Impressum */}
-      <Modal size="lg" show={showImpressum} centered onHide={handleCloseImpressum}>
-        <ModalHeader closeButton>
-          <ModalTitle>Impressum</ModalTitle>
-        </ModalHeader>
-        <ModalBody></ModalBody>
-        <ModalFooter>
-          <Button variant="secondary" onClick={handleCloseImpressum}>
-            Schließen
-          </Button>
-        </ModalFooter>
-      </Modal>
+      <Impressum handleCloseImpressum={handleCloseImpressum} showImpressum={showImpressum} />
       {/* Datenschutz */}
-      <Modal size="lg" show={showDatenschutz} centered onHide={handleCloseDatenschutz}>
-        <ModalHeader closeButton>
-          <ModalTitle>Datenschutzerklärung</ModalTitle>
-        </ModalHeader>
-        <ModalBody></ModalBody>
-        <ModalFooter>
-          <Button variant="secondary" onClick={handleCloseDatenschutz}>
-            Schließen
-          </Button>
-        </ModalFooter>
-      </Modal>
+      <Datenschutz handleCloseDatenschutz={handleCloseDatenschutz} showDatenschutz={showDatenschutz} />
     </>
   );
 }

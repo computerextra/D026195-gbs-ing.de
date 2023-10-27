@@ -1,27 +1,44 @@
 #root {
   height: 100vh;
-  
+
   overflow: hidden;
 }
 .custom-container {
-  margin-top: 20vh;
+  margin-top: 15vh;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  border-radius: 1rem;
 }
 
 [data-bs-theme="dark"] {
-  #root{
-    /* background-image: url();  */
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-    }
+  #root {
+    background-image: url("/GBS.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .custom-container {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
 }
 [data-bs-theme="light"] {
-  #root{
-    /* background-image: url();  */
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-    }
+  #root {
+    background-image: url("/GBS.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .custom-container {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
 }
 
 @media only screen and (max-width: 576px) {
