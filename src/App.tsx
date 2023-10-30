@@ -3,10 +3,10 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import Datenschutz from "./Datenschutz";
 import useTheme from "./Hooks/useTheme";
 import Impressum from "./Impressum";
-import ThemeToggle from "./ThemeToggle";
+// import ThemeToggle from "./ThemeToggle";
 
 function App() {
-  const { setDark, setManual } = useTheme();
+  useTheme();
 
   const [showImpressum, setShowImpressum] = useState(false);
   const [showDatenschutz, setShowDatenschutz] = useState(false);
@@ -16,14 +16,14 @@ function App() {
   const handleShowImpressum = () => setShowImpressum(true);
   const handleShowDatenschutz = () => setShowDatenschutz(true);
 
-  const toggleMode = () => {
-    setManual(true);
-    setDark((prev) => !prev);
-  };
+  // const toggleMode = () => {
+  //   setManual(true);
+  //   setDark((prev) => !prev);
+  // };
 
   return (
     <>
-      <ThemeToggle onClick={toggleMode} />
+      {/* <ThemeToggle onClick={toggleMode} /> */}
       <Container fluid={"sm"} className="custom-container">
         <h2 className="text-center">Hier entsteht die Webseite von</h2>
         <h1 className="text-center">Green Building Solutions GmbH i.G</h1>
