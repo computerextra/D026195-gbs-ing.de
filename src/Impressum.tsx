@@ -32,7 +32,7 @@ export default function Impressum({ showImpressum, handleCloseImpressum }: Modal
         <p>
           Telefon: 0176/14915477
           <br />
-          E-Mail: marc [PUNKT] klatecki [AT] kp-bauphysik [PUNKT] de
+          E-Mail: kontakt [AT] gbs-ing [PUNKT] de
         </p>
 
         <h2>EU-Streitschlichtung</h2>

@@ -90,7 +90,7 @@ export default function Datenschutz({ showDatenschutz, handleCloseDatenschutz }:
         <p>
           Telefon: 0176/14915477
           <br />
-          E-Mail: marc [PUNKT] klatecki [AT] kp-bauphysik [PUNKT] de
+          E-Mail: kontakt [AT] gbs-ing [PUNKT] de
         </p>
         <p>
           Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B.
