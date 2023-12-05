@@ -26,24 +26,38 @@ function App() {
       {/* <ThemeToggle onClick={toggleMode} /> */}
       <Container fluid={"sm"} className="custom-container">
         <h2 className="text-center">Hier entsteht die Webseite von</h2>
-        <h1 className="text-center">Green Building Solutions GmbH i.G</h1>
+        <h1 className="text-center">Green Building Solutions GmbH</h1>
         <Row className="gx-5 mt-5">
           <Col sm={6} className="d-flex justify-content-center">
-            <Button variant="primary" className="btn-lg " onClick={handleShowImpressum}>
+            <Button
+              variant="primary"
+              className="btn-lg "
+              onClick={handleShowImpressum}
+            >
               Impressum
             </Button>
           </Col>
           <Col sm={6} className="d-flex justify-content-center">
-            <Button variant="primary" className="btn-lg " onClick={handleShowDatenschutz}>
+            <Button
+              variant="primary"
+              className="btn-lg "
+              onClick={handleShowDatenschutz}
+            >
               Datenschutz
             </Button>
           </Col>
         </Row>
       </Container>
       {/* Impressum */}
-      <Impressum handleCloseImpressum={handleCloseImpressum} showImpressum={showImpressum} />
+      <Impressum
+        handleCloseImpressum={handleCloseImpressum}
+        showImpressum={showImpressum}
+      />
       {/* Datenschutz */}
-      <Datenschutz handleCloseDatenschutz={handleCloseDatenschutz} showDatenschutz={showDatenschutz} />
+      <Datenschutz
+        handleCloseDatenschutz={handleCloseDatenschutz}
+        showDatenschutz={showDatenschutz}
+      />
     </>
   );
 }
