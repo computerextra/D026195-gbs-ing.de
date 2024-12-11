@@ -7,9 +7,9 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import Image1 from "@/assets/Green Building Solutions - 1.webp";
-import Image2 from "@/assets/Green Building Solutions - 2.webp";
-import Image3 from "@/assets/Green Building Solutions - 3.webp";
+import Image1 from "@/assets/GBS Broschüre 2024-1.webp";
+import Image2 from "@/assets/GBS Broschüre 2024-2.webp";
+import Image3 from "@/assets/GBS Broschüre 2024-3.webp";
 import { ImageDialog } from "./components/ImageDialog";
 import Autoplay from "embla-carousel-autoplay";
 
