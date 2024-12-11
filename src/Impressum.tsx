@@ -1,52 +1,27 @@
-import {
-  Button,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  ModalTitle,
-} from "react-bootstrap";
-
-type Modal = {
-  showImpressum: boolean;
-  handleCloseImpressum: () => void;
-};
-
-export default function Impressum({
-  showImpressum,
-  handleCloseImpressum,
-}: Modal) {
+export default function Impressum() {
   return (
-    <Modal
-      size="lg"
-      show={showImpressum}
-      centered
-      onHide={handleCloseImpressum}
-    >
-      <ModalHeader closeButton>
-        <ModalTitle>Impressum</ModalTitle>
-      </ModalHeader>
-      <ModalBody>
-        <h2>Angaben gemäß §5 TMG</h2>
+    <div className="px-12 pb-4">
+      <h1 className="mt-20 !mb-0 text-center">Impressum</h1>
+      <div className="max-w-[80%] mx-auto">
         <p>
           Green Building Solutions GmbH
           <br />
           Ederweg 4-6
           <br />
-          34277 Fuldabrück
+          34277 Fuldabr&uuml;ck
         </p>
 
         <p>
           <strong>Vertreten durch:</strong>
           <br />
-          Dipl.-Ing. Marc Klatecki <br />
+          Dipl.-Ing. Marc Klatecki
+          <br />
           Dr.-Ing. Matthias Ernst
         </p>
 
         <h2>Kontakt</h2>
         <p>
-          Telefon: 0561 / 3167969 - 0
-          <br />
+          Telefon: 0561 / 3167969 - 0<br />
           E-Mail: kontakt [AT] gbs-ing [PUNKT] de
         </p>
 
@@ -58,6 +33,7 @@ export default function Impressum({
             href="https://ec.europa.eu/consumers/odr/"
             target="_blank"
             rel="noopener noreferrer"
+            className="underline"
           >
             https://ec.europa.eu/consumers/odr/
           </a>
@@ -72,18 +48,24 @@ export default function Impressum({
           vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </p>
 
+        <h2>
+          Zentrale Kontaktstelle nach dem Digital Services Act - DSA (Verordnung
+          (EU) 2022/265)
+        </h2>
         <p>
-          Quelle:{" "}
-          <a href="https://www.e-recht24.de/impressum-generator.html">
-            https://www.e-recht24.de/impressum-generator.html
-          </a>
+          Unsere zentrale Kontaktstelle f&uuml;r Nutzer und Beh&ouml;rden nach
+          Art. 11, 12 DSA erreichen Sie wie folgt:
         </p>
-      </ModalBody>
-      <ModalFooter>
-        <Button variant="secondary" onClick={handleCloseImpressum}>
-          Schließen
-        </Button>
-      </ModalFooter>
-    </Modal>
+        <p>
+          E-Mail: kontakt [AT] gbs-ing [PUNKT] de
+          <br />
+          Telefon: 0561 / 3167969 - 0
+        </p>
+        <p>
+          Die für den Kontakt zur Verf&uuml;gung stehenden Sprachen sind:
+          Deutsch, Englisch.
+        </p>
+      </div>
+    </div>
   );
 }

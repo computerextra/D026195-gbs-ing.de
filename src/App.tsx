@@ -1,63 +1,73 @@
-import { useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import Datenschutz from "./Datenschutz";
-import useTheme from "./Hooks/useTheme";
-import Impressum from "./Impressum";
-// import ThemeToggle from "./ThemeToggle";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
+import Image1 from "@/assets/Green Building Solutions - 1.webp";
+import Image2 from "@/assets/Green Building Solutions - 2.webp";
+import Image3 from "@/assets/Green Building Solutions - 3.webp";
+import { ImageDialog } from "./components/ImageDialog";
+import Autoplay from "embla-carousel-autoplay";
 
 function App() {
-  useTheme();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
 
-  const [showImpressum, setShowImpressum] = useState(false);
-  const [showDatenschutz, setShowDatenschutz] = useState(false);
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
 
-  const handleCloseImpressum = () => setShowImpressum(false);
-  const handleCloseDatenschutz = () => setShowDatenschutz(false);
-  const handleShowImpressum = () => setShowImpressum(true);
-  const handleShowDatenschutz = () => setShowDatenschutz(true);
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
 
-  // const toggleMode = () => {
-  //   setManual(true);
-  //   setDark((prev) => !prev);
-  // };
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <>
-      {/* <ThemeToggle onClick={toggleMode} /> */}
-      <Container fluid={"sm"} className="custom-container">
-        <h2 className="text-center">Hier entsteht die Webseite von</h2>
-        <h1 className="text-center">Green Building Solutions GmbH</h1>
-        <Row className="gx-5 mt-5">
-          <Col sm={6} className="d-flex justify-content-center">
-            <Button
-              variant="primary"
-              className="btn-lg "
-              onClick={handleShowImpressum}
-            >
-              Impressum
-            </Button>
-          </Col>
-          <Col sm={6} className="d-flex justify-content-center">
-            <Button
-              variant="primary"
-              className="btn-lg "
-              onClick={handleShowDatenschutz}
-            >
-              Datenschutz
-            </Button>
-          </Col>
-        </Row>
-      </Container>
-      {/* Impressum */}
-      <Impressum
-        handleCloseImpressum={handleCloseImpressum}
-        showImpressum={showImpressum}
-      />
-      {/* Datenschutz */}
-      <Datenschutz
-        handleCloseDatenschutz={handleCloseDatenschutz}
-        showDatenschutz={showDatenschutz}
-      />
+      <h1 className="my-20 text-center">Green Building Solutions GmbH</h1>
+      <div className="mx-auto max-w-[60%]">
+        <Carousel
+          setApi={setApi}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
+          className="w-auto max-h-[50vh]"
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <div className="max-h-[50vh]">
+                <ImageDialog alt="" src={Image1} />
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="max-h-[50vh]">
+                <ImageDialog alt="" src={Image2} />
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="max-h-[50vh]">
+                <ImageDialog alt="" src={Image3} />
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+        <div className="py-2 text-sm text-center text-background">
+          Bild {current} von {count}
+        </div>
+      </div>
     </>
   );
 }
