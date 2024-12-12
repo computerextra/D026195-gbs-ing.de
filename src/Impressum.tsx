@@ -5,7 +5,7 @@ export default function Impressum() {
         <h1 className="mt-20 !mb-0 text-center">Impressum</h1>
         <div className="max-w-[80%] mx-auto">
           <p>
-            Green Building Solutions GmbH
+            GBS Green Building Solutions GmbH
             <br />
             Ederweg 4-6
             <br />

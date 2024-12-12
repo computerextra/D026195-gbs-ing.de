@@ -6,7 +6,7 @@ export default function Kontakt() {
 
         <h2> Ihr Kontakt zu uns</h2>
         <p>
-          Green Building Solutions GmbH
+          GBS Green Building Solutions GmbH
           <br />
           Ederweg 4-6
           <br />

@@ -8,6 +8,7 @@ import {
 import Image1 from "@/assets/GBS Broschüre 2024-1.webp";
 import Image2 from "@/assets/GBS Broschüre 2024-2.webp";
 import Image3 from "@/assets/GBS Broschüre 2024-3.webp";
+import { Button } from "./components/ui/button";
 
 function App() {
   return (
@@ -47,6 +48,17 @@ function App() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+        <div className="flex justify-center mt-2">
+          <Button asChild variant="outline">
+            <a
+              href="/Green_Building_Solutions_-_Broschüre_2024.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download PDF
+            </a>
+          </Button>
+        </div>
       </div>
     </>
   );

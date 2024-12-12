@@ -22,7 +22,7 @@ export default function Datenschutz() {
             Die Verarbeitung von personenbezogenen Daten, beispielsweise Ihres
             Namens, der Anschrift oder der E-Mail-Adresse, erfolgt stets im
             Einklang mit der Datenschutz-Grundverordnung (DS-GVO) und in
-            Übereinstimmung mit den für die "Green Building Solutions GmbH"
+            Übereinstimmung mit den für die "GBS Green Building Solutions GmbH"
             geltenden landesspezifischen Datenschutzbestimmungen. Mittels dieser
             Datenschutzerklärung möchten wir Sie über Umfang und Zweck der von
             uns erhobenen, genutzten und verarbeiteten personenbezogenen Daten
@@ -77,7 +77,8 @@ export default function Datenschutz() {
           <h2>2. Verantwortlicher</h2>
           <p>Verantwortlicher im Sinne der DS-GVO ist die:</p>
           <p>
-            Green Building Solutions GmbH <br />
+            GBS Green Building Solutions GmbH
+            <br />
             Dipl.-Ing. Marc Klatecki
             <br />
             Dr.-Ing. Matthias Ernst

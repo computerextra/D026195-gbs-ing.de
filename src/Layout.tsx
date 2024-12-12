@@ -26,7 +26,7 @@ export default function Layout() {
               <NavigationMenuItem>
                 <Link to="/">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Starseite
+                    Startseite
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
