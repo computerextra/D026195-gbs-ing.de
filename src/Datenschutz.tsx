@@ -1,9 +1,9 @@
 export default function Datenschutz() {
   return (
-    <>
-      <div className="px-12 pb-4">
+    <div className="container mx-auto overflow-x-hidden text-background">
+      <div className="px-12 pt-1 pb-20 break-words bg-black/40 rounded-xl text-pretty">
         <h1 className="mt-20 !mb-0 text-center">Datenschutzerklärung</h1>
-        <div className="max-w-[80%] mx-auto">
+        <div className="max-w-[80%] mx-auto ">
           <h2>1. Einleitung</h2>
           <p>
             Mit den folgenden Informationen möchten wir Ihnen als "betroffener
@@ -574,6 +574,6 @@ export default function Datenschutz() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

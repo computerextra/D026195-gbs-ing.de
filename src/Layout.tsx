@@ -12,50 +12,51 @@ import BGImage from "@/assets/GBS.webp";
 
 export default function Layout() {
   return (
-    <div className="h-[100vh] w-[100vw]">
+    <div className="h-[100vh] w-[100vw] overflow-x-hidden">
       {/* BG Image */}
       <img
         src={BGImage}
         alt=""
         className="fixed object-cover h-[100vh] w-[100vw] -z-50"
       />
-      <div className="flex justify-center pt-2">
-        <NavigationMenu className="px-8 py-2 mt-2 border bg-background rounded-xl">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Starseite
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/Impressum">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Impressum
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/Datenschutz">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Datenschutz
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/Kontakt">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Kontakt
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+      <div className="fixed z-50 w-full bottom-4">
+        <div className="flex justify-center">
+          <NavigationMenu className="bg-background rounded-xl">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link to="/">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Starseite
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/Impressum">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Impressum
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/Datenschutz">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Datenschutz
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/Kontakt">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Kontakt
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
       </div>
-      <div className="container mx-auto bg-foreground/45 rounded-xl min-h-[75vh] pt-1 mt-20 text-background">
-        <Outlet />
-      </div>
+
+      <Outlet />
     </div>
   );
 }

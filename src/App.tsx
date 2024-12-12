@@ -4,69 +4,49 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
 import Image1 from "@/assets/GBS Broschüre 2024-1.webp";
 import Image2 from "@/assets/GBS Broschüre 2024-2.webp";
 import Image3 from "@/assets/GBS Broschüre 2024-3.webp";
-import { ImageDialog } from "./components/ImageDialog";
-import Autoplay from "embla-carousel-autoplay";
 
 function App() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
-
   return (
     <>
-      <h1 className="my-20 text-center">Green Building Solutions GmbH</h1>
-      <div className="mx-auto max-w-[60%]">
+      <div className="max-w-[90vw] mx-auto mt-14">
         <Carousel
-          setApi={setApi}
-          plugins={[
-            Autoplay({
-              delay: 5000,
-            }),
-          ]}
-          className="w-auto max-h-[50vh]"
+          // setApi={setApi}
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          className="w-full max-w-[90vw]"
         >
           <CarouselContent>
             <CarouselItem>
-              <div className="max-h-[50vh]">
-                <ImageDialog alt="" src={Image1} />
-              </div>
+              <img
+                src={Image1}
+                alt={""}
+                className="object-contain mx-auto rounded-xl max-h-[85vh] w-auto"
+              />
             </CarouselItem>
             <CarouselItem>
-              <div className="max-h-[50vh]">
-                <ImageDialog alt="" src={Image2} />
-              </div>
+              <img
+                src={Image2}
+                alt={""}
+                className="object-contain mx-auto rounded-xl max-h-[85vh] w-auto"
+              />
             </CarouselItem>
             <CarouselItem>
-              <div className="max-h-[50vh]">
-                <ImageDialog alt="" src={Image3} />
-              </div>
+              <img
+                src={Image3}
+                alt={""}
+                className="object-contain mx-auto rounded-xl max-h-[85vh] w-auto"
+              />
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <div className="py-2 text-sm text-center text-background">
-          Bild {current} von {count}
-        </div>
       </div>
     </>
   );
