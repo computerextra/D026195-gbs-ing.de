@@ -79,6 +79,8 @@ export default function Datenschutz() {
           <p>
             GBS Green Building Solutions GmbH
             <br />
+            Dr.-Ing. Tobias Vogt
+            <br />
             Dipl.-Ing. Marc Klatecki
             <br />
             Dr.-Ing. Matthias Ernst
@@ -92,8 +94,8 @@ export default function Datenschutz() {
 
           <p>E-Mail: kontakt [AT] gbs-ing [PUNKT] de</p>
           <p>
-            Vertreter des Verantwortlichen: Dipl.-Ing. Marc Klatecki, Dr.-Ing.
-            Matthias Ernst
+            Vertreter des Verantwortlichen: Dr.-Ing. Tobias Vogt, Dipl.-Ing.
+            Marc Klatecki, Dr.-Ing. Matthias Ernst
           </p>
           <h2>3. Datenschutzbeauftragter</h2>
           <p>
@@ -101,8 +103,8 @@ export default function Datenschutz() {
             werden muss.
           </p>
           <p>
-            Die Ansprechpartner zum Thema Datenschutz: Dipl.-Ing. Marc Klatecki,
-            Dr.-Ing. Matthias Ernst
+            Die Ansprechpartner zum Thema Datenschutz: Dr.-Ing. Tobias Vogt,
+            Dipl.-Ing. Marc Klatecki, Dr.-Ing. Matthias Ernst
           </p>
           <p>Telefon: 0561 / 3167969 - 0</p>
           <p>E-Mail: kontakt [AT] gbs-ing [PUNKT] de</p>
