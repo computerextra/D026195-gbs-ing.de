@@ -15,6 +15,8 @@ export default function Impressum() {
           <p>
             <strong>Vertreten durch:</strong>
             <br />
+            Dr.-Ing. Tobias Vogt
+            <br />
             Dipl.-Ing. Marc Klatecki
             <br />
             Dr.-Ing. Matthias Ernst
